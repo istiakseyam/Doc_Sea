@@ -1,0 +1,13 @@
+{% extends 'working/base/base.html' %} {% load static %} {%block title%}Home{%endblock%} {%block body%} {% for h in hospital %}
+<div class="col-md-4">
+    <div class="service-box">
+        <div class="pic">
+            <a href="/home/{{ h.slug }}" class="rounded"><img src="{{h.logo.url}}" alt="{{h.hos_name}}"></a>
+        </div>
+        <a href="/home/{{ h.slug }}" class="btn">
+            <h3>{{ h.hos_name }}</h3>
+        </a>
+        <div>{{h.description}}</div>
+    </div>
+</div>
+{%endfor%} {%endblock%}
