@@ -1,0 +1,34 @@
+{%extends 'working/base/base.html'%} {%block title%}Login{%endblock%} {%block body%}
+
+
+{% for m in messages%}
+    <p align="center">{{m}}</p>
+{% endfor %}
+
+
+<h2 align="center">Login</h2>
+</br>
+<form method="POST" align="center">
+    {%csrf_token%}
+    <label for="fname">username:</label>
+    <input type="text" name="user"><br>
+    <label for="lname">password:</label>
+    <input type="password" name="pas"><br><br>
+    <button type="button" class="btn btn-warning"><a href={% url 'register' %}>register</a></button>
+    <button type="submit" class="btn btn-success">login</button>
+</form>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+{%endblock%}

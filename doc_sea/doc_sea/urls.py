@@ -18,9 +18,15 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from working.views import home
+from working.views import login
+from working.views import register
+from working.views import profile
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home, name='home')
+    path('',home, name='home'),
+    path('login/',login, name='login'),
+    path('register/',register, name='register'),
+    path('profile/',profile, name='profile')
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

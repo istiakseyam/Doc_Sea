@@ -1,0 +1,14 @@
+{% extends 'working/base/base.html' %} {% block body %}
+<h2 align='center'> Register
+</h2>
+        <form method="POST" action="{% url 'register' %}" align="center">
+            {% csrf_token %}
+            <label for="name">username:</label>
+            <input type="text"  name="name"><br>
+            <label for="pass">password:</label>
+            <input type="password"  name="pass"><br><br>
+            <button type="submit" class="btn btn-primary">register</button>
+        </form>
+        <br>
+        <br>
+{% endblock body %}
